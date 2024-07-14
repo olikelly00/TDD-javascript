@@ -51,3 +51,9 @@ describe('searchCandies', () => {
         expect(searchCandies('s', 4, candies)).toStrictEqual(['Skitties', 'Skittles'])
     });
 });
+
+describe('searchCandies', () => {
+    it('if I input ma and 10, it will return an array containing Mars and Maltesers', () => {
+        expect(searchCandies('ma', 10, candies)).toStrictEqual(['Mars', 'Maltesers'])
+    });
+});
