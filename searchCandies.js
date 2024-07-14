@@ -26,6 +26,10 @@ function getObjectName(object) {
 };
 
 function searchCandies(name, price, list) {
+    if (name[0] === name[0].toLowerCase()) {
+        name = name[0].toUpperCase() + name.slice(1)
+        console.log(name)
+    }
         let filteredList = list.filter(candy => isObjectValid(candy, name, price))
         let mappedList = filteredList.map(getObjectName)
         return mappedList
